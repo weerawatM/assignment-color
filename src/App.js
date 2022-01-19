@@ -24,11 +24,13 @@ function App() {
     
     <div className="App">
       <h1>Assignment</h1>
-      <SContainer >{defaultColor.map((e)=>{return <SCard style={{'backgroundColor':`${e}`}} onClick={()=>selectColor(e)}>{e}</SCard>})}</SContainer>
+      <hr></hr>
+      <SContainer >{defaultColor.map((e)=>{return <SCard style={{'backgroundColor':`${e}`}} onClick={()=>selectColor(e)}>{e}</SCard>})} </SContainer>
       
-      <div >bot is {defaultColor[botResult]}</div>
+      <div >You : {color}</div>
+      <div >Bot : {defaultColor[botResult]}</div>
 
-      <div>{checkWin(color,defaultColor[botResult])}</div>
+      <div>Result : {checkWin(color,defaultColor[botResult])}</div>
 
     </div>
     
